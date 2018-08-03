@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Dotted-English-Font';
+    src: url('./english/dotted/KGPrimaryDots-webfont.ttf');
+}
+
+@font-face {
+    font-family: 'Dotted-English-Font-2';
+    src: url('./english/dotted/RalewayDots-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Cursive-English-Font';
+    src: url('./english/Arellion.otf');
+}
+
+@font-face {
+    font-family: 'Caveat-Regular';
+    src: url('./english/google/Caveat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./english/google/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'MarckScript-Regular';
+    src: url('./english/google/MarckScript-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'DancingScript-Regular';
+    src: url('./english/google/DancingScript-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Allura-English-Font';
+    src: url('./english/google/Allura-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'MeieScript-Regular';
+    src: url('./english/google/MeieScript-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PinyonScript-Regular';
+    src: url('./english/google/PinyonScript-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Dotted-English-Font';
+    src: url('./dotted/KGPrimaryDots-webfont.ttf');
+}
+
+@font-face {
+    font-family: 'Topmarks-Book';
+    src: url('./english/topmarks/Regular/Topmarks-Book.ttf');
+}
+
+@font-face {
+    font-family: 'Topmarks-Bold';
+    src: url('./topmarks/Bold/Topmarks-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Topmarks-Book-Otf';
+    src: url('./topmarks/Regular/Topmarks-Book.otf');
+}
+
+@font-face {
+    font-family: 'Topmarks-Book-unhinted';
+    src: url('./topmarks/Regular/Topmarks-Book-unhinted.ttf');
+}

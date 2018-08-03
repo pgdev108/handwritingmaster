@@ -1,0 +1,266 @@
+.writeContentTextArea {
+    width: 500px;
+    font-size: 16px;
+}
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    #worksheetInputArea, #worksheetInputArea * {
+      visibility: visible;        
+    }
+    #worksheetInputArea {
+      position: absolute;
+      margin: 0 auto;
+      left: 0;
+      top: 0;
+      margin: 10mm 10mm 10mm 10mm;
+    }
+  }
+
+.textAreaInputDiv {
+    width: 900px;
+    padding: 0;
+    margin: 0;
+    background-color: #e0e0e0;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.worksheetSelectStyle {
+    width: 900px;
+    padding: 0;
+    margin: 0;
+    background-color: #eeeeee;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.worksheetInputArea {    
+    width: 900px;
+    border: 1px solid black;    
+    background-color: #9e9e9e;  
+    margin: 0 auto;   
+}
+
+.textAreaInput {
+    margin-bottom: 0;
+    margin-top: 10px;
+    width: 90%;
+    font-size: 14px;
+    margin: 10px 42px 0px 42px;
+}
+
+.copyTextSubmitButton {
+    font-size: 14px;
+}
+
+.charRemainingTextDiv {
+    float: left; 
+    margin-left: 35px;
+}
+.remainingCharDiv {
+    height: 20px;
+    padding-right: 40px;
+}
+
+.charLeftDiv {
+    float: right;          
+}
+
+.wordLimitText {
+    margin-top: 10px;
+}
+.selectTextStyle {
+    display: inline-block;
+    margin-right: 20px;       
+    padding-left: 25px; 
+}
+
+.worksheetDropdownStyle {           
+    font-size: 12px;    
+    border-radius: 0;   
+    padding: 5px; 
+    margin: 10px;    
+    color: #01579b;
+}
+
+.selectTextSizeDropDown {
+    color: #01579b;
+    font-size: 12px;   
+}
+
+.selectTextSizeDiv {
+    display: inline-block;
+    margin-right: 20px
+}
+
+.selectTextColorDiv {
+    display: inline-block;
+    margin-right: 20px
+}
+
+.selectTextColorDropDown {
+    color: #01579b;
+    font-size: 12px;  
+}
+
+.printWorksheet {
+    display: inline-block;
+    margin-right: 20px    
+}
+
+.clearWorksheet {
+    display: inline-block;    
+}
+
+.worksheetSelectStyle button {
+    font-size: 12px;
+    color: #01579b;
+}
+
+.worksheetInput {
+    background-color: white;
+    margin: 10px;   
+}
+
+.inputList {
+    padding: 0;
+    list-style-type: none;    
+    margin: 0;
+}
+
+.worksheetNameDiv {
+    height: 80px;
+    width: 100%;    
+    padding-top: 10px;
+}
+
+.worksheetFooterDiv {
+    width: 100%;
+}
+
+.worksheetFooterText {
+    width: 30%;    
+    margin: 0 auto;
+    font-size: 20px;
+    /* padding: 20px; */
+    padding: 0 30px 10px 30px;    
+}
+
+.worksheetFooterHR {
+    border: 1px solid #e0e0e0;    
+    margin: 0 10px;
+}
+
+.worksheetNameSection {
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.worksheetNameLabel {
+    font-size: 30px;
+    padding-right: 10px;
+}
+.worksheetNameInput {
+    font-size: 25px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+}
+
+.worksheetDateSection {
+    float: right;
+    margin-right: 30px;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.worksheetDateLabel {
+    font-size: 30px;
+    padding-right: 10px;
+}
+.worksheetDateInput {
+    font-size: 25px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    float: right;
+    width: 60%;
+}
+
+.inputRow {
+    position: relative;
+    margin-top: 20px;
+}
+
+.textInputHR1 {
+    border: 1px solid #616161;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    right: 10px;    
+}
+
+.textInputHR2 {
+    border: 1px dashed #e0e0e0;
+    position: absolute;
+    top: 25px;    
+    left: 10px;
+    right: 10px;
+}
+
+.textInputHR3 {
+    border: 1px solid #616161;
+    position: absolute;
+    top: 53px;    
+    left: 10px;
+    right: 10px;
+}
+
+.inputText{
+    background-color:transparent;    
+    font-size: 80px;
+    /*font-family: Dotted-English-Font, Topmarks-Book */
+    font-family: Dotted-English-Font;
+    border: none;
+    width: 98%;    
+    line-height: 34px;
+    margin-left: 5px;
+    padding-left: 5px;
+    text-decoration-style: dashed;
+}
+
+
+
+/* .slantLines{
+    position: absolute;
+    transform: rotate(45deg);
+    width: 50px;
+    top: 36px;    
+    background-color: red;
+    border: none;
+    height: 2px;    
+ }
+
+ .slantLinesPosition1 {
+    left: 50px;
+ }
+ 
+ .slantLinesPosition2 {
+    left: 55px;
+ }
+
+ .slantLinesPosition3 {
+    left: 58px;
+ }
+
+ .slantLinesPosition4 {
+    left: 64px;
+ }
+
+ .slantLinesPosition5 {
+    left: 68px;
+ } */

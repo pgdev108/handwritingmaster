@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/fonts/fonts.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/worksheet.css">
+    <link rel="stylesheet" href="./css/availableStyles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Worksheet</title>
+
+</head>
+
+<body class="worksheetBody">
+    <div id="container">
+        <header>
+            <div id="headerLogoDiv" class="headerLogoDiv">
+                <div id="headerLogo" class="headerLogo">
+                    <span id="headerLogoHWText" class="headerLogoHWText">Handwriting Master</span>
+                    <!-- <span id="headerLogoMasterText" class="headerLogoMasterText">Master</span> -->
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Sample Speadsheets</a>
+                    </li>
+                    <li>
+                        <a href="#">How to Create Spreadsheet</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="home" class="home">
+            <div id="siteDescriptionSection" class="siteDescriptionSection">
+                <div id="featuresDiv" class="featuresDiv">
+                    <ul>
+                        <li>Create custom worksheet easily.</li>
+                        <li>Multiples text styles to select from.</li>
+                        <li>Select Size of choice.</li>
+                        <li>Select text color of choice</li>                        
+                    </ul>
+                </div>
+            
+                <div id="availableStylesDiv" class="availableStylesDiv">
+                    <div class="availableStylesText">Available Text Styles:</div>
+                    <ul>
+                        <li>
+                            <div class="availableStyleListText">English - Dotted</div>
+                            <div class="availabileStylesListDiv">
+                                <div class="stylesText" style="font-family: 'Dotted-English-Font'">ABCD abc</div>
+                                <hr class="engDottedHR1" />
+                                <hr class="engDottedHR2" />
+                                <hr class="engDottedHR3" />
+                            </div>
+                        </li>
+                        <li>
+                            <div class="availableStyleListText">English - Cursive</div>
+                            <div class="availabileStylesListDiv">
+                                <div class="stylesText" style="font-family: 'PinyonScript-Regular'">ABCD abc</div>
+                                <hr class="engCursiveHR1" />
+                                <hr class="engCursiveHR2" />
+                                <hr class="engCursiveHR3" />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div id='worksheetArea' class="worksheetArea">
+                <div id="textAreaInputDiv" class="textAreaInputDiv">
+                    <textarea rows="2" cols="90" id="textAreaInput" class="textAreaInput"></textarea>
+                    <div id="remainingCharDiv" class="remainingCharDiv">
+                        <div id="charRemainingTextDiv" class="charRemainingTextDiv">Characters Limit
+                            <span id="charRemainingText" class="charRemainingText">200</span>
+                        </div>
+                        <div id="charLeftDiv" class="charLeftDiv">200</div>
+                    </div>
+                </div>
+                <div id='worksheetSelectStyle' class="worksheetSelectStyle">
+                    <div id="selectTextStyle" class="selectTextStyle">
+                        <select id="selectTextStyleDropdown" class="worksheetDropdownStyle" onchange="updateFontFamily()">
+                            <option value="Dotted-English-Font">Select Text Style</option>
+                            <option value="Dotted-English-Font">English - Dotted (default)</option>
+                            <!-- <option value="Dotted-English-Font-2">English - Dotted 2</option>
+                            <option value="Cursive-English-Font">Engilsh - Cursive</option>
+                            <option value="Allura-English-Font">English - Allura</option>
+                            <option value="MeieScript-Regular">English - MeieScript</option> -->
+                            <option value="PinyonScript-Regular">English - Pinyon</option>
+                        </select>
+                    </div>
+
+                    <div id="selectTextSizeDiv" class="selectTextSizeDiv">
+                        <select id="selectTextSize" class="selectTextSizeDropDown" onchange="updateWorksheetSetting()">
+                            <option value="medium">Select Text Size</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium (default)</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+
+                    <div id="selectTextColorDiv" class="selectTextColorDiv">
+                        <select id="selectTextColor" class="selectTextColorDropDown" onchange="updateTextColor()">
+                            <option value="black">Select Text Color</option>
+                            <option value="black">Black (default)</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                            <option value="purple">Purple</option>
+                        </select>
+                    </div>
+
+                    <div id="printWorksheet" class="printWorksheet">
+                        <button onclick="printWorksheet()">Print</button>
+                    </div>
+
+                    <div id="clearWorksheet" class="clearWorksheet">
+                        <button onclick="clearWorksheet()">Clear</button>
+                    </div>
+                </div>
+                <div id="worksheetInputArea" class="worksheetInputArea">
+                    <div id="worksheetInput" class="worksheetInput">
+                        <div id="worksheetNameDiv" class="worksheetNameDiv">
+                            <span id="worksheetNameSection" class="worksheetNameSection">
+                                <span id="worksheetNameLabel" class="worksheetNameLabel">Name:</span>
+                                <input type="text" id="worksheetNameInput" class="worksheetNameInput" />
+                            </span>
+                            <span id="worksheetDateSection" class="worksheetDateSection">
+                                <span id="worksheetDateLabel" class="worksheetDateLabel">Date:</span>
+                                <input type="text" id="worksheetDateInput" class="worksheetDateInput" />
+                            </span>
+                        </div>
+                        <div>
+                            <ul id='inputList' class="inputList">
+                            </ul>
+                        </div>
+                        <div id="worksheetFooterDiv" class="worksheetFooterDiv">
+                            <hr id="worksheetFooterHR" class="worksheetFooterHR" />
+                            <div id="worksheetFooterText" class="worksheetFooterText">www.handwritingmaster.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/worksheetConfig.js"></script>
+    <script src="./js/worksheet.js"></script>
+</body>
+
+</html>
