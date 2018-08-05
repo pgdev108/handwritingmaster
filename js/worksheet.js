@@ -2,7 +2,7 @@ function addInputList(rowCount = 10) {
     let stringDiv = '';
     let numberOfRows = fetchRowCount() || rowCount;
     let inputDivStr = "<li class='inputRow'> " +
-        "<input type='text' class='inputText'/>" +
+        "<input type='text' class='inputText' maxlength='28' />" +
         "<hr class='textInputHR1' />" +
         "<hr class='textInputHR2' />" +
         "<hr class='textInputHR3' />" +
@@ -19,8 +19,8 @@ function updateCharCount() {
     let rowCount = config.rowCount || 8;
     let rowCharCount = config.rowCharCount || 20;
     var cs = [(parseInt(rowCount) * parseInt(rowCharCount)) - $(this).val().length];
-    $('#charLeftDiv').text(cs);  
-    copyTexttoWorksheet();
+    $('#charLeftDiv').text(cs);      
+    copyTexttoWorksheet(document.getElementById("textAreaInput").value);
 }
 
 function resetCharCount() {
@@ -31,12 +31,14 @@ function resetCharCount() {
     $('#charRemainingText').text(parseInt(rowCount) * parseInt(rowCharCount));
 }
 
-function copyTexttoWorksheet() {
-    let textValue = document.getElementById("textAreaInput").value;
-    let numberOfRows = 10;
-    let rowLength = 20;
+function copyTexttoWorksheet(textValue) {
+    
+    let config = fetchCurrentConfig();
+    let numberOfRows = config.rowCount;
+    let rowLength = config.rowCharLength;
+    console.log ('row char length ', rowLength);
     let rowCount = 0;
-    let workSheetTextArr = [];
+    let workSheetTextArr = [];    
     if (textValue.trim() !== '') {
         let textValueArr = textValue.split(' ');
         let testString = '';
@@ -102,16 +104,30 @@ function updateTextSize() {
 }
 
 function updateWorksheetSetting() {
+    // fetch existing values from worksheet.
+    let currentTextInputValues = fetchCurrentTextInputValues();    
     let config = fetchCurrentConfig();
     addInputList();
+    copyTexttoWorksheet(currentTextInputValues);
     updateWorksheet(config);
     resetCharCount();
+}
+
+function fetchCurrentTextInputValues () {
+    let textInputArr = document.getElementsByClassName('inputText');
+    let textInputValue = '';
+    for (let element of textInputArr) {
+        if (element.value.trim() !== '') {
+            textInputValue = textInputValue + ' ' + element.value;
+        }        
+    }    
+    return textInputValue.trim();
 }
 
 function fetchCurrentConfig() {
     let language = 'english';
     let textSize = document.getElementById("selectTextSize").value;
-    let textStyle = document.getElementById("selectTextStyleDropdown").value;
+    let textStyle = document.getElementById("selectTextStyleDropdown").value;        
     return worksheetConfig[language][textStyle][textSize];
 }
 
@@ -119,8 +135,10 @@ function fetchRowCount() {
     return fetchCurrentConfig().rowCount;
 }
 function updateWorksheet(config) {
-    updateFontFamily();
+    updateFontFamily();    
     $(".inputText").css("fontSize", config.rowFontSize);
+    $(".inputText").css("text-indent", config.textIndent);
+    $(".inputText").css("maxLength", config.rowCharLength);    
     $(".textInputHR1").css("top", config.topHR);
     $(".textInputHR2").css("top", config.middleHR);
     $(".textInputHR3").css("top", config.bottomHR);

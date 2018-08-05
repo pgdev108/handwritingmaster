@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'Cursive-English-Font';
+    font-family: 'Arellion-English-Font';
     src: url('./english/Arellion.otf');
 }
 
@@ -44,13 +44,13 @@
 }
 
 @font-face {
-    font-family: 'PinyonScript-Regular';
+    font-family: 'PinyonScript-English-Font';
     src: url('./english/google/PinyonScript-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'Dotted-English-Font';
-    src: url('./dotted/KGPrimaryDots-webfont.ttf');
+    font-family: 'Cursive-English-Font';
+    src: url('./english/google/LeagueScript.ttf');
 }
 
 @font-face {
