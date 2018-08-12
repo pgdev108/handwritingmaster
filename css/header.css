@@ -62,8 +62,8 @@ header {
 }
 
 header .headerLogoDiv {    
-    float: left; 
-    margin-left: 20px;   
+    /* float: left; 
+    margin-left: 20px;   */    
 }
 
 /* .headerHR1 {
@@ -90,10 +90,11 @@ header .headerLogoDiv {
 } */
 
 .headerLogoHWText {
+    width: 30%;
     font-size: 40px;    
-    font-family: Caveat-Regular;
-    display: inline-block;    
+    font-family: Caveat-Regular;      
     color: #f5f5f5;
+    margin: 0 auto;
 }
 
 .headerLogoMasterText {    
